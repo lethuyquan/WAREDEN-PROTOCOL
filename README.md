@@ -36,12 +36,16 @@ cp $(which wardend) $HOME/.warden/cosmovisor/genesis/bin
 ```
 
 **Set node CLI configuration**
+```
 wardend config set client chain-id chiado_10010-1
 wardend config set client keyring-backend test
 wardend config set client node tcp://localhost:27357
+```
 
-# Initialize the node
+**Initialize the node**
+```
 wardend init "Your Node Name" --chain-id chiado_10010-1
+```
 
 # Download genesis and addrbook files
 curl -L https://snapshots-testnet.nodejumper.io/warden/genesis.json > $HOME/.warden/config/genesis.json
