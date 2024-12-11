@@ -47,9 +47,11 @@ wardend config set client node tcp://localhost:27357
 wardend init "Your Node Name" --chain-id chiado_10010-1
 ```
 
-# Download genesis and addrbook files
+**Download genesis and addrbook files**
+```
 curl -L https://snapshots-testnet.nodejumper.io/warden/genesis.json > $HOME/.warden/config/genesis.json
 curl -L https://snapshots-testnet.nodejumper.io/warden/addrbook.json > $HOME/.warden/config/addrbook.json
+```
 
 # Set seeds
 sed -i -e 's|^seeds *=.*|seeds = "2d2c7af1c2d28408f437aef3d034087f40b85401@52.51.132.79:26656,2d2c7af1c2d28408f437aef3d034087f40b85401@52.51.132.79:26656,5461e7642520a1f8427ffaa57f9d39cf345fcd47@54.72.190.0:26656"|' $HOME/.warden/config/config.toml
