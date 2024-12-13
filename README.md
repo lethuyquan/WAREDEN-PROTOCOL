@@ -63,12 +63,14 @@ sed -i -e 's|^seeds *=.*|seeds = "2d2c7af1c2d28408f437aef3d034087f40b85401@52.51
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "1award"|' $HOME/.warden/config/app.toml
 ```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.warden/config/app.toml
+```
 
 # Enable prometheus
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.warden/config/config.toml
