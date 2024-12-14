@@ -72,9 +72,10 @@ sed -i \
   $HOME/.warden/config/app.toml
 ```
 
-# Enable prometheus
+**Enable prometheus**
+```
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.warden/config/config.toml
-
+```
 # Change ports
 sed -i -e "s%:1317%:27317%; s%:8080%:27380%; s%:9090%:27390%; s%:9091%:27391%; s%:8545%:27345%; s%:8546%:27346%; s%:6065%:27365%" $HOME/.warden/config/app.toml
 sed -i -e "s%:26658%:27358%; s%:26657%:27357%; s%:6060%:27360%; s%:26656%:27356%; s%:26660%:27361%" $HOME/.warden/config/config.toml
