@@ -82,8 +82,10 @@ sed -i -e "s%:1317%:27317%; s%:8080%:27380%; s%:9090%:27390%; s%:9091%:27391%; s
 sed -i -e "s%:26658%:27358%; s%:26657%:27357%; s%:6060%:27360%; s%:26656%:27356%; s%:26660%:27361%" $HOME/.warden/config/config.toml
 ```
 
-# Download latest chain data snapshot
+**Download latest chain data snapshot**
+```
 curl "https://snapshots-testnet.nodejumper.io/warden/warden_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.warden"
+```
 
 # Install Cosmovisor
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.0
