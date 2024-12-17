@@ -87,8 +87,10 @@ sed -i -e "s%:26658%:27358%; s%:26657%:27357%; s%:6060%:27360%; s%:26656%:27356%
 curl "https://snapshots-testnet.nodejumper.io/warden/warden_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.warden"
 ```
 
-# Install Cosmovisor
+**Install Cosmovisor**
+```
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.0
+```
 
 # Create a service
 sudo tee /etc/systemd/system/warden.service > /dev/null << EOF
