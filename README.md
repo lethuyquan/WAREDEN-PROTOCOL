@@ -92,7 +92,8 @@ curl "https://snapshots-testnet.nodejumper.io/warden/warden_latest.tar.lz4" | lz
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.0
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/warden.service > /dev/null << EOF
 [Unit]
 Description=Warden node service
@@ -113,6 +114,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable warden.service
+```
 
 # Start the service and check the logs
 sudo systemctl start warden.service
